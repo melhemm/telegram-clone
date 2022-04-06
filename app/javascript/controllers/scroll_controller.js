@@ -9,7 +9,7 @@ export default class extends Controller {
   }
 
   disconnect() {
-    console.log(disconnect);
+    console.log('disconnect');
   }
 
   resetScroll() {
