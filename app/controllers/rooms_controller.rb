@@ -20,7 +20,7 @@ class RoomsController < ApplicationController
     @message = Message.new
     # @messages = @single_room.messages.order(created_at: :asc)
     pagy_messages = @single_room.messages.order(created_at: :desc)
-    @pagy, messages = pagy(pagy_messages, items: 20)
+    @pagy, messages = pagy(pagy_messages, items: 10)
     @messages = messages.reverse
 
     render 'index'
