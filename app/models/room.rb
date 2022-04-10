@@ -1,5 +1,7 @@
 class Room < ApplicationRecord
-  has_many :messages
+  has_many :messages, dependent: :destroy
+  has_many :joinables, dependent: :destroy
+  has_many :joined_users, through: :joinables, source: :user
 
   validates_uniqueness_of :name
 
